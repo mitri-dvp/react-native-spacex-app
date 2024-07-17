@@ -50,6 +50,10 @@ export default function RootLayout() {
             name="(screens)/home"
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="(modals)/details"
+            options={{ headerShown: false, presentation: "modal" }}
+          />
         </Stack>
       </ThemeProvider>
     </ApolloProvider>
