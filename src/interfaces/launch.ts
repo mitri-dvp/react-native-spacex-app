@@ -11,8 +11,12 @@ interface LaunchDetails {
   rocket: Rocket;
   details: string;
   launch_date_utc: string;
-  launch_site: null;
+  launch_site?: LaunchSite;
   links: Links;
+}
+
+interface LaunchSite {
+  site_name: string;
 }
 
 interface Rocket {

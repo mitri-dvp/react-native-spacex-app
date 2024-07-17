@@ -51,7 +51,7 @@ export default function RootLayout() {
             options={{ headerShown: false }}
           />
           <Stack.Screen
-            name="(modals)/details"
+            name="(modals)/details/[id]"
             options={{ headerShown: false, presentation: "modal" }}
           />
         </Stack>

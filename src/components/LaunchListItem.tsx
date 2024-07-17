@@ -26,7 +26,7 @@ const LaunchListItem = ({ launch }: { launch: Launch }) => {
       <Text style={styles.details}>
         {launch.details || "No details provided"}
       </Text>
-      <Link href={"(modals)/details"} asChild>
+      <Link href={`(modals)/details/${launch.id}`} asChild>
         <Button title="View Details" />
       </Link>
     </View>
