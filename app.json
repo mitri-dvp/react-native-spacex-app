@@ -13,7 +13,8 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.mitri-dvp.react-native-grapql-spacex-app"
     },
     "android": {
       "adaptiveIcon": {
