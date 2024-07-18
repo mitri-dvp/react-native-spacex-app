@@ -10,7 +10,7 @@ import { useEffect } from "react";
 import "react-native-reanimated";
 import { ApolloClient, ApolloProvider, InMemoryCache } from "@apollo/client";
 
-import { useColorScheme } from "react-native";
+import { Platform, useColorScheme } from "react-native";
 
 // Prevent the splash screen from auto-hiding before asset loading is complete.
 SplashScreen.preventAutoHideAsync();
@@ -52,7 +52,15 @@ export default function RootLayout() {
           />
           <Stack.Screen
             name="(modals)/details/[id]"
-            options={{ headerShown: false, presentation: "modal" }}
+            options={{
+              headerShown: false,
+              presentation: Platform.select({
+                ios: "modal",
+                android: "containedModal",
+              }),
+              animation: "slide_from_bottom",
+              animationDuration: 100,
+            }}
           />
         </Stack>
       </ThemeProvider>

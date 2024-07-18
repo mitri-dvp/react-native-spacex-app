@@ -79,7 +79,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
     fontWeight: "600",
-    marginVertical: 8,
+    marginVertical: 16,
     textAlign: "center",
   },
   input: {
