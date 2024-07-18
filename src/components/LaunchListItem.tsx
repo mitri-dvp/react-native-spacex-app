@@ -27,7 +27,7 @@ const LaunchListItem = ({ launch }: { launch: Launch }) => {
         {launch.details || "No details provided"}
       </Text>
       <Link href={`(modals)/details/${launch.id}`} asChild>
-        <Button title="View Details" />
+        <Text style={styles.link}>View Details</Text>
       </Link>
     </View>
   );
@@ -50,6 +50,11 @@ const styles = StyleSheet.create({
   },
   details: {
     fontSize: 16,
+  },
+  link: {
+    fontSize: 16,
+    marginVertical: 8,
+    color: Colors.blue,
   },
   separator: {
     marginVertical: 8,
